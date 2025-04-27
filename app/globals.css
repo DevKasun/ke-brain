@@ -1,26 +1,57 @@
-@import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+/* Custom theme colors */
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-primary: #e75a7c; /* Button bg and link text */
+    --color-text-dark-bg: #f2f5ea; /* Text color on dark backgrounds */
+    --color-text-light-bg: #2c363f; /* Text color on light backgrounds */
+    --color-sidebar-bg: #d6dbd2; /* Sidebar background */
+    --color-bg-light: #d6dbd2; /* Light background */
+    --color-bg-dark: #2c363f; /* Dark background */
+    --color-bg-alt: #f2f5ea; /* Alternate background */
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Glassmorphism utility */
+@layer utilities {
+  .glass {
+    @apply bg-white/20 backdrop-blur-md border border-white/30 rounded-lg shadow-lg;
+  }
+}
+
+/* Button styles */
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--color-primary)] text-white font-semibold py-2 px-4 rounded transition-colors duration-300 hover:bg-pink-600;
+  }
+  .btn-primary-text {
+    @apply text-[var(--color-primary)] hover:underline cursor-pointer;
+  }
+}
+
+/* Text colors */
+.text-on-dark {
+  color: var(--color-text-dark-bg);
+}
+
+.text-on-light {
+  color: var(--color-text-light-bg);
+}
+
+/* Backgrounds */
+.bg-sidebar {
+  background-color: var(--color-sidebar-bg);
+}
+
+.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+.bg-dark {
+  background-color: var(--color-bg-dark);
+}
+
+.bg-alt {
+  background-color: var(--color-bg-alt);
 }
