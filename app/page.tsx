@@ -1,7 +1,7 @@
 import Link from 'next/link'; // Import the Link component
 export default async function Home() {
 	return (
-		<div className='flex items-center justify-center min-h-screen bg-gradient-to-br from-green-200 via-green-300 to-blue-300'>
+		<div className='flex items-center justify-center min-h-screen bg-light'>
 			<div className='flex flex-col space-y-4'>
 				<Link
 					href='/login'
