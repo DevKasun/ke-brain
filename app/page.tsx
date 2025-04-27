@@ -1,12 +1,9 @@
 import Link from 'next/link'; // Import the Link component
 export default async function Home() {
 	return (
-		<div className='flex items-center justify-center min-h-screen bg-light'>
+		<div className='flex items-center justify-center min-h-screen bg-primary-light'>
 			<div className='flex flex-col space-y-4'>
-				<Link
-					href='/login'
-					className='px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors text-center'
-				>
+				<Link href='/login' className='px-6 py-2 btn-primary'>
 					Login
 				</Link>
 				<Link

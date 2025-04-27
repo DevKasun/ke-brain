@@ -3,12 +3,12 @@
 /* Custom theme colors */
 @layer base {
   :root {
-    --color-primary: #e75a7c; /* Button bg and link text */
+    --color-primary: #2A9D8F; /* Button bg and link text */
     --color-text-dark-bg: #f2f5ea; /* Text color on dark backgrounds */
-    --color-text-light-bg: #2c363f; /* Text color on light backgrounds */
+    --color-text-light-bg: #303036; /* Text color on light backgrounds */
     --color-sidebar-bg: #d6dbd2; /* Sidebar background */
     --color-bg-light: #d6dbd2; /* Light background */
-    --color-bg-dark: #2c363f; /* Dark background */
+    --color-bg-dark: #303036; /* Dark background */
     --color-bg-alt: #f2f5ea; /* Alternate background */
   }
 }
@@ -23,7 +23,7 @@
 /* Button styles */
 @layer components {
   .btn-primary {
-    @apply bg-[var(--color-primary)] text-white font-semibold py-2 px-4 rounded transition-colors duration-300 hover:bg-pink-600;
+    @apply bg-[var(--color-primary)] text-[var(--color-text-dark-bg)] text-center font-semibold py-2 px-4 rounded;
   }
   .btn-primary-text {
     @apply text-[var(--color-primary)] hover:underline cursor-pointer;
@@ -42,6 +42,10 @@
 /* Backgrounds */
 .bg-sidebar {
   background-color: var(--color-sidebar-bg);
+}
+
+.bg-primary-light {
+  @apply bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-text-dark-bg)];
 }
 
 .bg-light {
