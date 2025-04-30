@@ -12,7 +12,7 @@ export default function LoginPage() {
 	const handleLogin = async () => {};
 
 	return (
-		<div className='flex items-center justify-center min-h-screen bg-gradient-to-br from-green-200 via-green-300 to-blue-300'>
+		<div className='flex items-center justify-center min-h-screen bg-primary-light'>
 			<div className='w-full max-w-sm p-8 space-y-6 bg-white rounded-lg shadow-md dark:bg-gray-800'>
 				<h1 className='text-2xl font-bold text-center text-gray-900 dark:text-white'>
 					Login
@@ -69,11 +69,14 @@ export default function LoginPage() {
 				{/* Add the link below the form */}
 				<p className='text-sm font-light text-center text-gray-500 dark:text-gray-400'>
 					Don’t have an account yet?{' '}
-					<Link
-						href='/signup'
-						className='font-medium text-green-600 hover:underline dark:text-green-500'
-					>
+					<Link href='/signup' className='btn-primary-text'>
 						Sign up
+					</Link>
+				</p>
+				<p className='text-sm font-light text-center text-gray-500 dark:text-gray-400'>
+					Go back to{' '}
+					<Link href='/' className='btn-primary-text'>
+						home
 					</Link>
 				</p>
 			</div>

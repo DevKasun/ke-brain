@@ -30,6 +30,15 @@
   }
 }
 
+/* Button styles */
+.btn-primary {
+  @apply px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors text-center;
+}
+
+.btn-primary-text {
+  @apply font-medium text-green-500 hover:underline cursor-pointer;
+}
+
 /* Text colors */
 .text-on-dark {
   color: var(--color-text-dark-bg);
@@ -45,7 +54,7 @@
 }
 
 .bg-primary-light {
-  @apply bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-text-dark-bg)];
+  @apply bg-gradient-to-br from-green-200 via-green-300 to-blue-300;
 }
 
 .bg-light {
@@ -59,3 +68,4 @@
 .bg-alt {
   background-color: var(--color-bg-alt);
 }
+

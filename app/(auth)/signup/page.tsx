@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function SignupPage() {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-    // TODO: need to add setError 
+	// TODO: need to add setError
 	const [error] = useState<string | null>(null);
 
 	const handleSignUp = async () => {};
@@ -70,11 +70,14 @@ export default function SignupPage() {
 				{/* Add the link below the form */}
 				<p className='text-sm font-light text-center text-gray-500 dark:text-gray-400'>
 					Already have an account?{' '}
-					<Link
-						href='/login'
-						className='font-medium text-green-600 hover:underline dark:text-green-500'
-					>
+					<Link href='/login' className='btn-primary-text'>
 						Log in
+					</Link>
+				</p>
+				<p className='text-sm font-light text-center text-gray-500 dark:text-gray-400'>
+					Go back to{' '}
+					<Link href='/' className='btn-primary-text'>
+						home
 					</Link>
 				</p>
 			</div>
